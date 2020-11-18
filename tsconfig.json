@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017", // nest 기본값은 es2017
+    "lib": ["ES5", "ES6", "ES2015", "ES7", "ES2016", "ES2017", "ES2018", "ESNext", "esnext.asynciterable"],
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true, // decorator 쓰려면 켜놔야 함
+    "experimentalDecorators": true, // decorator 쓰려면 켜놔야 함
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true, // 제너레이터(function* {}, yeild...) 사용을 위해 true로
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "noImplicitAny": false, // 우선 개발 편의를 위해 noImplicitAny 꺼두자
+    "esModuleInterop": true, // import * from 이 꼴 사용하기 싫어서
+    "allowJs": true, // 일단 js도 허용
+    "checkJs": true, // 일단 js도 허용
+  }
+}
