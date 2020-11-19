@@ -9,8 +9,8 @@ export class MoviesService {
     return this.movies;
   }
 
-  getOne(id: string): Movie {
-    const movie = this.movies.find((movie) => movie.id === parseInt(id));
+  getOne(id: number): Movie {
+    const movie = this.movies.find((movie) => movie.id === id);
     if (!movie) {
       throw new NotFoundException(`Movie with ID ${id} not found`); // nest에서 제공해주는 예외처리
     }
@@ -21,12 +21,12 @@ export class MoviesService {
     this.movies.push({ id: this.movies.length + 1, ...movieData });
   }
 
-  deleteOne(id: string) {
+  deleteOne(id: number) {
     this.getOne(id); // 지우고자 하는 영화의 id가 없으면 404를 내도록 처리
-    this.movies = this.movies.filter((movie) => movie.id !== parseInt(id));
+    this.movies = this.movies.filter((movie) => movie.id !== id);
   }
 
-  update(id: string, updateData) {
+  update(id: number, updateData) {
     const movie = this.getOne(id);
     this.deleteOne(id);
     this.movies.push({ ...movie, ...updateData });

@@ -14,5 +14,7 @@ yarn
 nest new [project-name] // new는 n으로 줄여 표현 가능
 nest 입력 후 cli를 확인해볼 것
 ```
+### pipe
 
+[https://docs.nestjs.com/pipes](https://docs.nestjs.com/pipes)
 
